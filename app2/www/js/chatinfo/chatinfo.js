@@ -1,6 +1,6 @@
 'use strict';
 angular.module('crewapp.chatinfo', ['google.places'])
-.controller('ChatInfoController', function($scope, plansFactory){
+.controller('ChatInfoController', function($scope, plansFactory, Sockets){
   $scope.test = 'hello';
     $scope.bothEntered = true;
 
@@ -10,6 +10,7 @@ angular.module('crewapp.chatinfo', ['google.places'])
       if (!place) {
         alert('Please enter a place!');
       };
+
 
       var photo = function() {
         if (!!place.photos){
@@ -41,5 +42,6 @@ angular.module('crewapp.chatinfo', ['google.places'])
       console.log($scope.one);
       $scope.plans.two = $scope.two;
       console.log($scope.two);
+      Sockets.emit('submit plan', {'event1': $scope.plans.one, 'event2': $scope.plans.two})
     }
   });

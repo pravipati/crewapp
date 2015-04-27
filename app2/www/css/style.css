@@ -81,16 +81,39 @@
   margin-top: 0px;
 }
 
+/*Chat Info page styles*/
+
 .bg-chatinfo {
-  background-image: -webkit-image-set(
-    url('../img/chatinfo.png') 1x,
-    url('../img/chatinfo@2x.png') 2x,
-    url('../img/chatinfo@3x.png') 3x
-  );
-  margin-top: 0px;
+  margin-top: 82px;
+  display: block;
+  height: 629.11px;
+  width: 400px;
+  background-color: #FFFEF5;
 }
 
+.chat-info-header {
+  display: block;
+  height: 82px;
+  width: 414px;
+  background-image: -webkit-image-set(
+    url('../img/crew-info-header.png') 1x,
+    url('../img/crew-info-header@2x.png') 2x,
+    url('../img/crew-info-header@3x.png') 3x
+  );
+}
+
+
 /* Chat room styles */ 
+
+.message-input {
+  position: absolute;
+  margin-top: 599px;
+  display: block;
+  width: 414.97px;
+  height: 54.04px;
+  background: #E7E7E7;
+  border: 1px solid #979797;
+}
 
 .profile-picture {
   border-radius: 200px;
@@ -207,12 +230,13 @@
   height: 34px !important;
   width: 320px;
   border: none;
+  
 }
 
 .nav-back {
   position: absolute;
   left: 10px;
-  top: 26px;
+  top: 30px;
   height: 29px;
   width: 77px;
   background-image: -webkit-image-set(
